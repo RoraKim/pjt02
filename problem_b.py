@@ -20,7 +20,7 @@ def vote_average_movies():
     my_list = []
     for i in data.get('results'):
         if i.get('vote_average') >= 8:
-            my_list.append(i)
+            my_list.append(i.get('title'))
     return my_list
 
 

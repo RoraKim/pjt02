@@ -21,8 +21,17 @@ def ranking():
     for i in data.get('results'):
         my_list.append(i.get('vote_average'))
         new_list = sorted(my_list)[:-6:-1]
-        if 
-    # return new_list
+
+    top_movie = []
+    for i in data.get('results'):
+        if i.get('vote_average') in new_list:
+            top_movie.append(i)
+        top_movie.sort(key = lambda top_movie : top_movie['vote_average'], reverse = True)
+    # print(type(top_movie))
+    return top_movie
+
+        
+
 
 
 if __name__ == '__main__':

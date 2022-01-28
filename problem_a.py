@@ -10,6 +10,8 @@ def popular_count():
     path = '/movie/popular'
     params = {
     'api_key': '65e2ff9b7e0eb74cfafc3986ea1f4a30',
+    'region': 'KR',
+    'language': 'ko'
     }
 
     response = requests.get(BASE_URL+path, params=params)
